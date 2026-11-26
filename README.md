@@ -38,6 +38,12 @@ When the power goes, my router tells every Proxmox node to shut down its VMs and
 **[alerts-worth-a-look](https://github.com/zacharyrichter/alerts-worth-a-look)**
 My security monitor only pushes an alert to my phone when it's worth a look. Everything else waits in a dashboard, and I tune the noise with rules and never by raising the threshold. It covers the rules, the exact-match allowlist for container healthchecks, and how I test the alert path end to end.
 
+**[assume-it-walks](https://github.com/zacharyrichter/assume-it-walks)**
+My laptop leaves the house, so I built it assuming it will be lost, stolen or used on hostile Wi-Fi. Nothing listens on it, unknown USB devices are blocked, all traffic goes through a WireGuard tunnel away from home, and its SSH keys are useless without a hardware key and PIN. It covers the build, the checklist for cutting it off if it goes missing, and the checks that prove it.
+
+**[one-front-door](https://github.com/zacharyrichter/one-front-door)**
+Every internal app signs in through one identity provider that only answers from inside my network. It covers how each app is wired in (OIDC, SAML or a forward-auth proxy), who can open what, and a tested way back in if my own admin account gets locked out.
+
 **[homelab-compose](https://github.com/zacharyrichter/homelab-compose)**
 The real Docker Compose files that run my lab, with the secrets and addresses swapped out. If you're learning Docker, the homepage stack is a good place to start.
 
