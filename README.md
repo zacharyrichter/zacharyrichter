@@ -44,6 +44,9 @@ My laptop leaves the house, so I built it assuming it will be lost, stolen or us
 **[one-front-door](https://github.com/zacharyrichter/one-front-door)**
 Every internal app signs in through one identity provider that only answers from inside my network. It covers how each app is wired in (OIDC, SAML or a forward-auth proxy), who can open what, and a tested way back in if my own admin account gets locked out.
 
+**[narrow-tunnel](https://github.com/zacharyrichter/narrow-tunnel)**
+Every device I own gets a full WireGuard tunnel home, but only the least it needs once it's in. Everyone gets the apps and the internet, a couple of admin devices get a few more rules, and a VPS fallback that can't reach home is switched on by hand. It covers the firewall rule order, why I dropped automatic failover, and how a lost device is cut off.
+
 **[homelab-compose](https://github.com/zacharyrichter/homelab-compose)**
 The real Docker Compose files that run my lab, with the secrets and addresses swapped out. If you're learning Docker, the homepage stack is a good place to start.
 
