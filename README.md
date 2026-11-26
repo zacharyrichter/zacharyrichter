@@ -17,6 +17,12 @@ Twenty-plus containers means a constant choice between "update everything blindl
 **[trust-no-cache](https://github.com/zacharyrichter/trust-no-cache)**
 A hardened VPS running services that apps talk to, so there's no login page to hide behind. The firewall and the reverse proxy both follow one allowlist that tracks my home IP, and the server has no route back into my house. It also has a postmortem of the time removing one "unused" package took my server offline two weeks later.
 
+**[no-open-doors](https://github.com/zacharyrichter/no-open-doors)**
+I wanted to share a couple of apps with people outside my house without opening a single port on my router. A small tunnel client dials out, one reverse proxy sits behind it, and a brute-force detector watches the logs before anything reaches the apps. It also has a postmortem of a harmless-looking log rotation that kept stopping my reverse proxy, and the second incident that showed me it was the same bug.
+
+**[diff-is-the-audit](https://github.com/zacharyrichter/diff-is-the-audit)**
+Twelve hosts, and the documents describing them kept drifting. So the standard became the playbook: run it in check mode and it shows exactly where a host has strayed. It also has my CIS hardening results, including every check I chose to accept as a failure and why.
+
 **[homelab-compose](https://github.com/zacharyrichter/homelab-compose)**
 The real Docker Compose files that run my lab, with the secrets and addresses swapped out. If you're learning Docker, the homepage stack is a good place to start.
 
