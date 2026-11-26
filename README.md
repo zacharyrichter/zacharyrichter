@@ -29,6 +29,15 @@ My lab's SSH host certificates expire every year on purpose. Renewing them is on
 **[no-mail-server](https://github.com/zacharyrichter/no-mail-server)**
 Linux tools still expect a local mail server to report problems. I didn't want to run one, so every host sends through one short script to my own notification server. The unattended-upgrades report lands on my phone, and nothing listens on port 25.
 
+**[backups-nobody-watches](https://github.com/zacharyrichter/backups-nobody-watches)**
+My backups run at 1 a.m. on a weekend and nobody looks at them, so I built the system so a broken backup can't stay quiet. It covers where the backups live, why my database VMs get stopped instead of snapshotted, how I'd rebuild the backup server from the data alone, and the checks that prove the whole path works.
+
+**[graceful-power-loss](https://github.com/zacharyrichter/graceful-power-loss)**
+When the power goes, my router tells every Proxmox node to shut down its VMs and then itself before the battery runs out. It covers the chain from the UPS to the VMs, the one firewall rule it needs, and a way to test the shutdown path on one node without shutting anything down.
+
+**[alerts-worth-a-look](https://github.com/zacharyrichter/alerts-worth-a-look)**
+My security monitor only pushes an alert to my phone when it's worth a look. Everything else waits in a dashboard, and I tune the noise with rules and never by raising the threshold. It covers the rules, the exact-match allowlist for container healthchecks, and how I test the alert path end to end.
+
 **[homelab-compose](https://github.com/zacharyrichter/homelab-compose)**
 The real Docker Compose files that run my lab, with the secrets and addresses swapped out. If you're learning Docker, the homepage stack is a good place to start.
 
