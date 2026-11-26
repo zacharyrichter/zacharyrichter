@@ -23,6 +23,12 @@ I wanted to share a couple of apps with people outside my house without opening 
 **[diff-is-the-audit](https://github.com/zacharyrichter/diff-is-the-audit)**
 Twelve hosts, and the documents describing them kept drifting. So the standard became the playbook: run it in check mode and it shows exactly where a host has strayed. It also has my CIS hardening results, including every check I chose to accept as a failure and why.
 
+**[expire-on-purpose](https://github.com/zacharyrichter/expire-on-purpose)**
+My lab's SSH host certificates expire every year on purpose. Renewing them is one supervised run that keeps the signing key in RAM and checks that every host is serving the new certificate, and a monthly check tells me when the next run is due. It also has the reasoning for why I used Ansible and not a secrets engine.
+
+**[no-mail-server](https://github.com/zacharyrichter/no-mail-server)**
+Linux tools still expect a local mail server to report problems. I didn't want to run one, so every host sends through one short script to my own notification server. The unattended-upgrades report lands on my phone, and nothing listens on port 25.
+
 **[homelab-compose](https://github.com/zacharyrichter/homelab-compose)**
 The real Docker Compose files that run my lab, with the secrets and addresses swapped out. If you're learning Docker, the homepage stack is a good place to start.
 
